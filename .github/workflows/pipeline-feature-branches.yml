@@ -1,9 +1,8 @@
-name: Pipeline for feature branches
+name: Pipeline
 on:
   push:
     branches:
-      - '*'
-      - '!main'
+      - 'feature/**'
 jobs:
   feature-branches:
     runs-on: ubuntu-22.04
