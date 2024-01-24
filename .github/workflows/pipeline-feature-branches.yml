@@ -1,4 +1,4 @@
-name: Pipeline
+name: CI Pipeline
 on:
   push:
     branches:
@@ -21,5 +21,5 @@ jobs:
         run: npm run test:unit
       - name: Acceptance Tests
         run: npm run test:acceptance
-      - name: e2e Tests
-        run: echo "Let's pretend this step is running 🐧"
+      - name: e2e Tests 🐧
+        run: echo "Let's pretend an e2e tests execution "

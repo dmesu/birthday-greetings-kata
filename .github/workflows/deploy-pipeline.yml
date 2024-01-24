@@ -18,11 +18,5 @@ jobs:
           node-version: 18
       - name: Install dependencies
         run: npm install
-      - name: Lint
-        run: npm run eslint
-      - name: Unit Tests
-        run: npm run test:unit
-      - name: Acceptance Tests
-        run: npm run test:acceptance
-      - name: Deploy
-        run: echo "Let's pretend this is deploying 🚀"
+      - name: Deploy 🚀
+        run: echo "Let's pretend a deployment 🚀"
