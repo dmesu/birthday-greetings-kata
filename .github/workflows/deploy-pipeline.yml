@@ -1,0 +1,28 @@
+name: Deploy Pipeline
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - closed
+jobs:
+  feature-branches:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm install
+      - name: Lint
+        run: npm run eslint
+      - name: Unit Tests
+        run: npm run test:unit
+      - name: Acceptance Tests
+        run: npm run test:acceptance
+      - name: Deploy
+        run: echo "Let's pretend this is deploying 🚀"
