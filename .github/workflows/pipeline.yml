@@ -1,7 +1,11 @@
-name: Pipeline
-on: [push]
+name: Pipeline for feature branches
+on:
+  push:
+    branches:
+      - '*'
+      - '!main'
 jobs:
-  hello-world:
+  feature-branches:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
@@ -18,3 +22,5 @@ jobs:
         run: npm run test:unit
       - name: Acceptance Tests
         run: npm run test:acceptance
+      - name: e2e Tests
+        run: echo "Let's pretend this step is running 🐧"
