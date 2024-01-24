@@ -5,7 +5,7 @@
     "test": "jest",
     "test:unit": "jest tests/*.test.ts",
     "test:acceptance": "jest tests/acceptance",
-    "lint": "eslint . --ext .ts"
+    "eslint": "eslint . --ext .ts"
   },
   "devDependencies": {
     "@types/jest": "^27.0.1",
