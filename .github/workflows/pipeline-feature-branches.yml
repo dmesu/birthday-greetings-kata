@@ -1,8 +1,7 @@
-name: Pipeline for feature branches
+name: Pipeline
 on:
   push:
     branches:
-      - '*'
       - '!main'
 jobs:
   feature-branches:
