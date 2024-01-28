@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - 'feature/**'
+
 jobs:
 
   lint:
@@ -46,7 +47,7 @@ jobs:
           node-version: 18
       - name: Install dependencies
         run: npm install
-      - name: Accept<ance Tests
+      - name: Acceptance Tests
         run: npm run test:acceptance
 
   e2e-tests:
@@ -62,4 +63,4 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: e2e Tests 🐧
-        run: echo "Let's pretend an e2e tests execution "
+        run: echo "Let's pretend an e2e test execution"
