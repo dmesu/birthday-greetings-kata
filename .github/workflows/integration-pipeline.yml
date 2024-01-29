@@ -63,4 +63,6 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: e2e Tests 🐧
-        run: echo "Let's pretend an e2e test execution"
+        run: |
+          echo "Let's pretend an e2e test execution"
+          sleep 20s
