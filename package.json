@@ -1,6 +1,6 @@
 {
   "name": "typescript-jest-boilerplate",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "scripts": {
     "test": "jest",
     "test:unit": "jest tests/*.test.ts",

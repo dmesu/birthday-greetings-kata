@@ -51,7 +51,7 @@ jobs:
         run: npm run test:acceptance
 
   e2e-tests:
-    needs: [lint]
+    needs: [unit-tests, acceptance-tests]
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
@@ -63,4 +63,6 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: e2e Tests 🐧
-        run: echo "Let's pretend an e2e test execution"
+        run: | 
+          echo "Let's pretend an e2e test execution"
+          sleep 15s

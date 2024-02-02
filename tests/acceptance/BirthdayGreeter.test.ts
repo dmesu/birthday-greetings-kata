@@ -24,7 +24,7 @@ describe("Birthday Greeting", () => {
         expect(fakeMailchimpNotifierSpy).toHaveBeenNthCalledWith(2, samSmith.email, samSmithNote.subject, samSmithNote.body);
     });
 
-    xit("should send a reminder email when there is a birthday to the friends that don't have birthdays today", () => {
+    it("should send a reminder email when there is a birthday to the friends that don't have birthdays today", () => {
         const birthdayGreetingService: BirthdayGreetingService = new BirthdayGreetingService();
         const fakeMailchimpNotifierSpy = jest.spyOn(fakeMailchimp, "send").mockReturnValue();
         birthdayGreetingService.sendTodayReminders();
